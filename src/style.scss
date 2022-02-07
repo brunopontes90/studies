@@ -1,0 +1,45 @@
+.ant-col {
+    .row-title {
+        margin-top: 1%;
+        font-size: 9pt;
+        margin-left: 5%;
+    }
+    .row-info {
+        margin-top: 2%;
+        margin-bottom: 0px;
+        &>.ant-number-due {
+            margin-left: 6%;
+            font-weight: bold;
+        }
+        &>.ant-file {
+            margin-left: 19%;
+            font-weight: bold;
+        }
+    }
+    .ant-col-files {
+        margin-top: 0px;
+        margin-bottom: 1%;
+        &>Input {
+            width: 25%;
+            margin-left: 5%;
+        }
+        .button-upload-file {
+            margin-left: 0.5%;
+        }
+        .button-plus {
+            width: 30px;
+            height: 31px;
+            margin-left: 1.5%;
+        }
+        .button-remove {
+            width: 30px;
+            height: 31px;
+            margin-left: 1.5%;
+        }
+    }
+    .ant-radio-bottom{
+        margin-top: 3%;
+        margin-left: 5%;
+    }
+
+}

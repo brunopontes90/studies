@@ -1,0 +1,59 @@
+<Col className="ant-col">
+      <Row className='row-title'>
+        <h1>Upload da DU-E</h1>
+      </Row>
+      <Row className='row-info'>
+        <Row className='ant-number-due'>
+          <p>Nº da DU-E</p>
+        </Row>
+        <Row className='ant-file'>
+          <p>Arquivo</p>
+        </Row>
+      </Row>
+      <Row className='ant-col-files'>
+        <Input disabled />
+        <Button
+        className='button-upload-file'
+        type="primary"
+        size="medium"
+        icon={<UploadOutlined />}
+        >
+          Carregar Arquivo
+        </Button>
+        <Button
+        className='button-plus'
+        type='primary'
+        size='small'
+        icon={<PlusOutlined />}
+        //onClick={ () => setUploadNewFile([...uploadNewFile, ""]) }
+        ></Button>
+      </Row>
+      {
+        uploadNewFile.map((uploadNewFile, index) => (
+          <Row key={index} className='ant-col-files'>
+            <Input disabled />
+            <Button
+            className='button-upload-file'
+            type="primary"
+            size="medium"
+            icon={<UploadOutlined />}
+            >
+              Carregar Arquivo
+            </Button>
+            <Button
+            className='button-remove'
+            type='danger'
+            size='small'
+            icon={<DeleteOutlined />}
+            //onClick={ removeInputFile }
+            ></Button>
+          </Row>
+        ))
+      }
+      <Row className='ant-radio-bottom'>
+        <Radio.Group onChange={onChange} value={value}>
+          <Radio value={1}>Notificar toda a equipe desse upload</Radio>
+          <Radio value={2}>Não notificar</Radio>
+        </Radio.Group>
+      </Row>
+    </Col>
