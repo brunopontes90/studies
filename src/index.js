@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import Test from './testMap';
+import Users from './tableUsers';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Test />
+    <Users />
   </React.StrictMode>,
   document.getElementById('root')
 );

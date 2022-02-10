@@ -1,0 +1,18 @@
+.ant-div {
+    .ant-title-h1 {
+        text-align: center;
+    }
+    .ant-table{
+        margin-left: 38%;
+        .ant-tr {
+            &>th {
+                text-align: center;
+                padding: 10px;
+            }
+            &>td {
+                text-align: center;
+                padding: 5px;
+            }
+        }
+    }
+}

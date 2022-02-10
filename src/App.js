@@ -19,16 +19,6 @@ function App() {
 
   const [value, setvalue] = useState(1);
   const [uploadNewFile, setUploadNewFile] = useState([defaultUploadFile]);
-
-  const renderFiles = () => {
-    uploadNewFile.map((content, indexFile) => {
-      <Row key={indexFile}>
-        <Col>
-          <p>Teste aqui</p>
-        </Col>
-      </Row>
-    });
-  }
   
   /*const removeInputFile = (e) => {
     e.preventDefault();
@@ -42,7 +32,11 @@ function App() {
 
   return (
     <div>
-      {renderFiles()}
+      {uploadNewFile.map((content, indexFile) => 
+        <div>
+            <p>Teste aqui</p>
+        </div>
+      )}
     </div>
   );
 }
