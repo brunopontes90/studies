@@ -1,4 +1,4 @@
-import { Input, Button } from "antd";
+import { Input, Button, message } from "antd";
 import React, { useState } from "react";
 import './tableUsers.scss';
 import 'antd/dist/antd.css';
@@ -13,6 +13,13 @@ function Users(){
     ];
 
     const [developer, setDeveloper] = useState([users]);
+
+    const developerName = (eventName) => {
+        if(eventName.keyCode === 13) {
+            const valueName = eventName.target.value;
+            console.log(valueName);
+        }      
+    }
 
     return(
         <div className="ant-div">
@@ -32,29 +39,27 @@ function Users(){
                     <td>{contentUsers}</td>
                     {contentUsers == "Moises" ? (
                         <td>Tech Lead</td>
-                    ) : <td>Desenvolvedores da ElloX Digital</td>}
+                    ) : <td>Desenvolvedor da ElloX Digital</td>}
                 </tr>
                 )}
             </table>
             <div className="ant-dev">
                 <label>Nome do Desenvolvedor:</label>
-                <Input placeholder="Nome do Desenvolvedor" value={developer.value}/>
+                <Input placeholder="Digite o nome" onKeyDown={(eventName) => developerName(eventName)} />
             </div>
 
-            <div className="ant-button">
+            {/*<div className="ant-button">
                 <Button
                 type="primary"
                 size="medium"
-                onClick={() => console.log(setDeveloper(developer))}
+                onClick={developerName}
                 >
                 Avançar
                 </Button>
-            </div>
+            </div>*/}
 
             <div className="ant-h2">
-                {developer.value == 'Moises' ? (
-                    <h2>{developer.value} é Tech Lead</h2>
-                ) : null}
+                <h2>{developerName}</h2>
             </div>
         </div>
     );
